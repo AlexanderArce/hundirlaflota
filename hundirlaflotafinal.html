@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hundir la flota</title>
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="js/hundirlaflota.js"></script>
+</head>
+<body>
+    <button class="pista" onclick="pista()"></button>
+    <div id="preload">
+        <img id="agua" src="img/agua.png" alt="Image 01" />
+        <img id="barco" src="img/barco.png" alt="Image 02" />
+    </div>
+    <div id="juego">
+    <table>
+        <tr><td>Tabla PC</td><td>Tabla Jugador</td></tr>
+        <tr>
+            <td>
+                <canvas style="margin-right:20px;" id="Canvas1" width="300px" height="300px"></canvas>
+            </td>
+            <td>
+                <canvas style="margin-right:20px;" id="Canvas2" width="300px" height="300px"></canvas>
+            </td>
+        </tr>
+    </table>
+    <canvas style="margin-right:20px;" id="Canvas3" width="625px" height="80px"></canvas>
+    <script type="text/javascript">
+        init();
+        pintarTablero();
+        botones();
+        //Tabla jugador
+        colocarJugador();
+        //Tabla PC
+        colocarPC();
+        
+    </script>
+</body>
+</html>
